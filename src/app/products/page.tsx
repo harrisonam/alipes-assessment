@@ -10,11 +10,13 @@ const ProductPage = async () => {
   });
 
   return (
-    <div className="flex items-center justify-center">
+    <ul className="flex items-center justify-center">
       {products.map((product, i) => (
-        <Product key={i} {...(product.data as ProductProps)} />
+        <li key={i}>
+          <Product {...(product.data as ProductProps)} />
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 
